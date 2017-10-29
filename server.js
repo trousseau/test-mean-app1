@@ -12,7 +12,7 @@ var init = require('./config/init')(),
  * Please note that the order of loading is important.
  */
 
-var mongoUri = "mongodb://tyler-admin:8=D=wu2eA0_4.aZ@ds036079.mlab.com:36079/test-mean-app1db";
+let mongoUri = process.env.MONGO_URI
 
 // Bootstrap db connection
 var db = mongoose.connect(mongoUri, function(err) {
