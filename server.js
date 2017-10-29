@@ -12,8 +12,10 @@ var init = require('./config/init')(),
  * Please note that the order of loading is important.
  */
 
+var mongoUri = "mongodb://tyler-admin:8=D=wu2eA0_4.aZ@ds036079.mlab.com:36079/test-mean-app1db";
+
 // Bootstrap db connection
-var db = mongoose.connect(config.db, function(err) {
+var db = mongoose.connect(mongoUri, function(err) {
 	if (err) {
 		console.error(chalk.red('Could not connect to MongoDB!'));
 		console.log(chalk.red(err));
